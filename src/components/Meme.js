@@ -4,7 +4,7 @@ import MemeCard from './MemeCard';
 import Shimmer from './Shimmer';
 
 const Meme = () => {
-      const [memeData,setMemedata]=useState([]);
+      const [memeData,setMemedata]=useState(null);
 
     const getMeme= async()=>{
          
@@ -15,15 +15,16 @@ const Meme = () => {
     }
        useEffect(()=>{getMeme();},[])
 
-    if(memeData.length===0) return ( <Shimmer/> )
+
     return (
          <div className='flex  flex-row flex-wrap'>
           {
-           memeData.map((m)=><MemeCard  key={m.id} data={m}/>)
+           !memeData ? (<Shimmer/>) :  (memeData.map((m)=><MemeCard  key={m.id} data={m}/>))
+        
           }
          </div>
     
   )
 }
 
-export default Meme
+export default Meme 
