@@ -8,6 +8,7 @@ import About from './components/About';
 import ProtectedRoute from './components/ProtectedRoute';
 import { BrowserRouter,Route,Routes ,Link} from 'react-router-dom';
 import { useState } from 'react';
+import Accordion from './components/Accordion';
 
 function App() {
 
@@ -20,6 +21,8 @@ function App() {
         <a className='m-2 text-lg p-2' href='/profile'>profile</a>
         <a  className='m-2 text-lg p-2' href='/login'>Login</a>
         <a  className='m-2 text-lg p-2' href='/about'>About</a>
+        <a  className='m-2 text-lg p-2' href='/accordion'>Accordion</a>
+        
 
          
     </nav>
@@ -41,6 +44,7 @@ function App() {
    <Route  path="/profile" element={<Profile/>}></Route>
   </Route>
   <Route  path="/login" element={<Login/>}></Route>
+  <Route  path="/accordion" element={<Accordion/>}></Route>
   </Routes>
   
   </BrowserRouter>
