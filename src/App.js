@@ -9,6 +9,7 @@ import ProtectedRoute from './components/ProtectedRoute';
 import { BrowserRouter,Route,Routes ,Link} from 'react-router-dom';
 import { useState } from 'react';
 import Accordion from './components/Accordion';
+import Comment from './components/Comment/Comment';
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
         <a  className='m-2 text-lg p-2' href='/login'>Login</a>
         <a  className='m-2 text-lg p-2' href='/about'>About</a>
         <a  className='m-2 text-lg p-2' href='/accordion'>Accordion</a>
+        <a  className='m-2 text-lg p-2' href='/comment'>Comment</a>
         
 
          
@@ -45,6 +47,7 @@ function App() {
   </Route>
   <Route  path="/login" element={<Login/>}></Route>
   <Route  path="/accordion" element={<Accordion/>}></Route>
+  <Route  path="/comment" element={<Comment/>}></Route>
   </Routes>
   
   </BrowserRouter>
