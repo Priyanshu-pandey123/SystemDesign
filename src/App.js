@@ -10,6 +10,7 @@ import { BrowserRouter,Route,Routes ,Link} from 'react-router-dom';
 import { useState } from 'react';
 import Accordion from './components/Accordion';
 import Comment from './components/Comment/Comment';
+import ImageSlider from './components/ImageSlider/ImageSlider';
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
         <a  className='m-2 text-lg p-2' href='/about'>About</a>
         <a  className='m-2 text-lg p-2' href='/accordion'>Accordion</a>
         <a  className='m-2 text-lg p-2' href='/comment'>Comment</a>
+        <a  className='m-2 text-lg p-2' href='/image'>ImageSlider</a>
         
 
          
@@ -48,6 +50,7 @@ function App() {
   <Route  path="/login" element={<Login/>}></Route>
   <Route  path="/accordion" element={<Accordion/>}></Route>
   <Route  path="/comment" element={<Comment/>}></Route>
+  <Route  path="/image" element={<ImageSlider/>}></Route>
   </Routes>
   
   </BrowserRouter>
