@@ -7,8 +7,11 @@ import Login from './components/Login';
 import About from './components/About';
 import ProtectedRoute from './components/ProtectedRoute';
 import { BrowserRouter,Route,Routes ,Link} from 'react-router-dom';
+import { useState } from 'react';
 
 function App() {
+
+  const [lang,setLang]=useState("en");
   return (
     <div className="App">
      <header  className='bg-gray-200 w-full h-40 flex border-2  border-black '>
@@ -20,6 +23,12 @@ function App() {
 
          
     </nav>
+    <select value={lang} onChange={(e)=>setLang(e.target.value)} className='w-20 h-16 items-center align-middle mt-11 rounded-lg'>
+      <option value="en">English</option>
+      <option value="hi">Hindi</option>
+      <option value="sp">Spanish</option>
+      <option value="ru">Russian</option>
+    </select>
   </header>
 
 
@@ -28,7 +37,7 @@ function App() {
     
   <Route  path="/" element={<Body/>}></Route>
   <Route  element={<ProtectedRoute/>}>
-   <Route path='/about' element={<About/>}></Route>
+   <Route path='/about' element={<About  lang={lang}/>}></Route>
    <Route  path="/profile" element={<Profile/>}></Route>
   </Route>
   <Route  path="/login" element={<Login/>}></Route>

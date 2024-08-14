@@ -4,7 +4,7 @@ import React from 'react'
 
 const Shimmer = () => {
 
-     const arr=[1,2,3,4,5,6,6,7,8]
+     const arr=[1,2,3,4,5,6,6,7,8,9]
   return (
     <div className='flex flex-row flex-wrap p-2 m-2'>
       

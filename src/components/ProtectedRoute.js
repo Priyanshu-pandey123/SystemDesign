@@ -5,8 +5,7 @@ import Login from './Login';
 import { Outlet } from 'react-router-dom';
 
 const ProtectedRoute = ({children}) => {
-    console.log(children,'form protected routes');
-    const auth=false;
+    const auth=true;
   return (
     <div>
      
