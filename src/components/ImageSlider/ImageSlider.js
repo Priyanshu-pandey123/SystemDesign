@@ -1,6 +1,6 @@
  
 
- import React, { useState } from 'react'
+ import React, { useEffect, useRef, useState } from 'react'
  
  const imageSliderData = [
     "https://picsum.photos/800/600?random=1",
@@ -14,16 +14,10 @@
     "https://picsum.photos/800/600?random=9",
     "https://picsum.photos/800/600?random=10"
   ];
-  
-
-  
-  
-  
-
-  
 
  const ImageSlider = () => {
     const [active,setActive]=useState(1);
+    const stop=useRef(null);
       
     const handleNext=()=>{
         setActive((active)=> (active+1) % imageSliderData.length)
@@ -34,13 +28,25 @@
         setActive((active)=>active<=0 ?imageSliderData.length-1:active-1)
     }
 
+    useEffect(()=>{
+        stop.current=setInterval(()=>{
+            handleNext();
+        },500);
+
+        return()=>{
+            clearInterval(stop.current);
+        }
+    },[])
+
    return (
-     <div className='flex m-2 p-2 justify-center items-center'>
+     <div className=' flex justify-center flex-col items-center'>
        
-        <button className=' m-2 bg-gray-700 p-2 h-10 w-20 rounded-full' onClick={handlePrev}>Prev</button>
+       <div className='flex m-2 p-2 justify-center items-center' >
+       <button className=' m-2 bg-gray-700 p-2 h-10 w-20 rounded-full' onClick={handlePrev}>Prev</button>
         <img src={imageSliderData[active]}  alt='not found' className='w-[700px] h-80' />
         <button className=' m-2 bg-gray-700 p-2 h-10 w-20 rounded-full' onClick={handleNext}>Next</button>
-
+       </div>
+        <button className=' m-2 bg-red-700 p-2 h-10 w-20 rounded-full' onClick={()=>clearInterval(stop.current)}>stop</button>
      </div>
    )
  }

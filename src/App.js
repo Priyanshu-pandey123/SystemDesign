@@ -11,6 +11,7 @@ import { useState } from 'react';
 import Accordion from './components/Accordion';
 import Comment from './components/Comment/Comment';
 import ImageSlider from './components/ImageSlider/ImageSlider';
+import Pagination from './Pagination/Pagination';
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
         <a  className='m-2 text-lg p-2' href='/accordion'>Accordion</a>
         <a  className='m-2 text-lg p-2' href='/comment'>Comment</a>
         <a  className='m-2 text-lg p-2' href='/image'>ImageSlider</a>
+        <a  className='m-2 text-lg p-2' href='/page'>Pagination</a>
         
 
          
@@ -51,6 +53,7 @@ function App() {
   <Route  path="/accordion" element={<Accordion/>}></Route>
   <Route  path="/comment" element={<Comment/>}></Route>
   <Route  path="/image" element={<ImageSlider/>}></Route>
+  <Route  path="/page" element={<Pagination/>}></Route>
   </Routes>
   
   </BrowserRouter>

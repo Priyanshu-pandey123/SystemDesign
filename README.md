@@ -77,3 +77,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 3.=>Add the logic of infinite scroll 
 4.=>Add the logic of accordian by lifting the state up
 5.=>Add the logic for the Nested Reddit comment by DFS logic
+6.=>Add the logic for the image slider
+7.=>add the logic of pagination
