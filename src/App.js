@@ -12,6 +12,7 @@ import Accordion from './components/Accordion';
 import Comment from './components/Comment/Comment';
 import ImageSlider from './components/ImageSlider/ImageSlider';
 import Pagination from './Pagination/Pagination';
+import Container from './LiveChat/Container';
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
         <a  className='m-2 text-lg p-2' href='/comment'>Comment</a>
         <a  className='m-2 text-lg p-2' href='/image'>ImageSlider</a>
         <a  className='m-2 text-lg p-2' href='/page'>Pagination</a>
+        <a  className='m-2 text-lg p-2' href='/chat'>Live Chat</a>
         
 
          
@@ -54,6 +56,7 @@ function App() {
   <Route  path="/comment" element={<Comment/>}></Route>
   <Route  path="/image" element={<ImageSlider/>}></Route>
   <Route  path="/page" element={<Pagination/>}></Route>
+  <Route  path="/chat" element={<Container/>}></Route>
   </Routes>
   
   </BrowserRouter>
