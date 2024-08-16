@@ -8,7 +8,7 @@
  ### `4.=>Add the logic of accordian by lifting the state up`
 
  ### `5.=>Add the logic for the Nested Reddit comment by DFS logic`
- ### `5.=>Add the logic for the Nested Reddit comment by DFS logic`
- ### `5.=>Add the logic for the Nested Reddit comment by DFS logic`
+ ### `6.=>Adding the logic of Pagination with Offset and LIMIT`
+ ### `7.=>Add the logic for the Image Slider with their edge cases `
 
-###  `working with the logic of TypeHead Search with debouncing and caching `
+###  `8.=>working with the logic of TypeHead with autoComplete Search with debouncing and caching `
