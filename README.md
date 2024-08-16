@@ -79,3 +79,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 5.=>Add the logic for the Nested Reddit comment by DFS logic
 6.=>Add the logic for the image slider
 7.=>add the logic of pagination
+8.=>Add the logic of live chat with POlling feature
